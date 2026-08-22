@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Flight Booking | Sruthi Travels</title>
+<meta name="description" content="Book domestic and international flight tickets with Sruthi Travels. Get assistance for flight booking, destinations, baggage and travel enquiries.">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #fff7fb;
+    color: #1f1a20;
+    padding-bottom: 30px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #eaddea;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    color: #732993;
+}
+
+.call-top {
+    text-decoration: none;
+    background: #732993;
+    color: white;
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #732993, #8e44ad);
+    color: white;
+    border-radius: 18px;
+    padding: 38px 25px;
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(115,41,147,0.25);
+}
+
+.hero .icon {
+    font-size: 46px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 31px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 15px;
+    line-height: 1.7;
+    opacity: 0.95;
+}
+
+/* BOOKING CARD */
+
+.booking-card {
+    background: white;
+    margin-top: -10px;
+    position: relative;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 6px 25px rgba(45,52,54,0.12);
+    border: 1px solid #eee2ed;
+}
+
+.booking-card h2 {
+    color: #732993;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    margin-bottom: 7px;
+}
+
+.booking-card .sub {
+    color: #665b67;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full {
+    grid-column: 1 / -1;
+}
+
+label {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #4e4350;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #d8cbd7;
+    border-radius: 9px;
+    background: #faf9fa;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+select:focus {
+    border-color: #732993;
+    box-shadow: 0 0 0 2px rgba(115,41,147,0.10);
+}
+
+.whatsapp-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #00a870;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.whatsapp-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* SERVICES */
+
+.section {
+    margin-top: 30px;
+}
+
+.section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    color: #732993;
+    margin-bottom: 15px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.service {
+    background: white;
+    border: 1px solid #eee2ed;
+    border-radius: 14px;
+    padding: 20px 12px;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(45,52,54,0.07);
+}
+
+.service-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.service h3 {
+    font-size: 14px;
+    color: #2d2830;
+    margin-bottom: 5px;
+}
+
+.service p {
+    font-size: 12px;
+    color: #706571;
+    line-height: 1.5;
+}
+
+/* DESTINATIONS */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.destination {
+    background: linear-gradient(135deg, #ffffff, #f8eef9);
+    border-radius: 14px;
+    padding: 18px;
+    border: 1px solid #eaddea;
+    box-shadow: 0 4px 12px rgba(45,52,54,0.06);
+}
+
+.destination strong {
+    color: #732993;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+}
+
+.destination p {
+    font-size: 12px;
+    color: #665b67;
+    margin-top: 5px;
+}
+
+/* WHY US */
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.why {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #eee2ed;
+}
+
+.why-icon {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.why h3 {
+    font-size: 14px;
+    color: #732993;
+    margin-bottom: 6px;
+}
+
+.why p {
+    font-size: 12px;
+    color: #665b67;
+    line-height: 1.5;
+}
+
+/* NAVIGATION */
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.navigation a {
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background: white;
+    color: #732993;
+    border: 1px solid #ddcddd;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.navigation a:hover {
+    background: #732993;
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 35px;
+    background: #2d3436;
+    color: white;
+    text-align: center;
+    padding: 28px 20px;
+    border-radius: 18px 18px 0 0;
+}
+
+footer h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 13px;
+    opacity: 0.85;
+    line-height: 1.7;
+}
+
+.footer-links {
+    margin-top: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 13px;
+}
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp {
+    position: fixed;
+    right: 18px;
+    bottom: 20px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #00a870;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 27px;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.25);
+    z-index: 200;
+}
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .container {
+        padding: 15px;
+    }
+
+    .hero {
+        margin-top: 15px;
+        padding: 30px 18px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.full {
+        grid-column: auto;
+    }
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destination-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-card {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .call-top {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">✈️ Sruthi Travels</div>
+
+    <a class="call-top" href="tel:9952772828">
+        ☎ Call Now
+    </a>
+</header>
+
+<div class="container">
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="icon">✈️</div>
+
+        <h1>Flight Booking</h1>
+
+        <p>
+            Domestic & International Flight Tickets<br>
+            Easy booking assistance with Sruthi Travels
+        </p>
+
+    </section>
+
+    <!-- BOOKING -->
+
+    <section class="booking-card">
+
+        <h2>✈️ Book Your Flight</h2>
+
+        <p class="sub">
+            Send your travel requirements to us on WhatsApp.
+            Our team will assist you with the best available options.
+        </p>
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input id="name" type="text" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input id="phone" type="tel" placeholder="Enter mobile number">
+            </div>
+
+            <div class="form-group">
+                <label>From</label>
+                <input id="from" type="text" placeholder="Example: Chennai">
+            </div>
+
+            <div class="form-group">
+                <label>To</label>
+                <input id="to" type="text" placeholder="Example: Dubai">
+            </div>
+
+            <div class="form-group">
+                <label>Travel Date</label>
+                <input id="date" type="date">
+            </div>
+
+            <div class="form-group">
+                <label>Passengers</label>
+
+                <select id="passengers">
+                    <option>1 Passenger</option>
+                    <option>2 Passengers</option>
+                    <option>3 Passengers</option>
+                    <option>4 Passengers</option>
+                    <option>5 Passengers</option>
+                    <option>6+ Passengers</option>
+                </select>
+            </div>
+
+            <div class="form-group full">
+
+                <label>Trip Type</label>
+
+                <select id="trip">
+                    <option>One Way</option>
+                    <option>Round Trip</option>
+                </select>
+
+            </div>
+
+        </div>
+
+        <a href="#" class="whatsapp-btn" onclick="sendWhatsApp(); return false;">
+            📱 WhatsApp Flight Booking
+        </a>
+
+    </section>
+
+    <!-- SERVICES -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Our Flight Services
+        </h2>
+
+        <div class="service-grid">
+
+            <div class="service">
+                <div class="service-icon">✈️</div>
+                <h3>Domestic Flights</h3>
+                <p>Flight booking across major Indian cities.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🌍</div>
+                <h3>International Flights</h3>
+                <p>International ticket booking assistance.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🧳</div>
+                <h3>Baggage Assistance</h3>
+                <p>Get information about airline baggage allowances.</p>
+            </div>
+
+            <div class="service">
+                <div class="service-icon">🔄</div>
+                <h3>Travel Changes</h3>
+                <p>Assistance for eligible date and booking changes.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- POPULAR DESTINATIONS -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Popular International Destinations
+        </h2>
+
+        <div class="destination-grid">
+
+            <div class="destination">
+                <strong>🇦🇪 Dubai</strong>
+                <p>Flight booking assistance</p>
+            </div>
+
+            <div class="destination">
+                <strong>🇦🇪 Abu Dhabi</strong>
+                <p>International flight booking</p>
+            </div>
+
+            <div class="destination">
+                <strong>🇦🇪 Sharjah</strong>
+                <p>Ticket booking assistance</p>
+            </div>
+
+            <div class="destination">
+                <strong>🇸🇦 Riyadh</strong>
+                <p>Saudi Arabia flights</p>
+            </div>
+
+            <div class="destination">
+                <strong>🇸🇬 Singapore</strong>
+                <p>Singapore flight booking</p>
+            </div>
+
+            <div class="destination">
+                <strong>🇲🇾 Kuala Lumpur</strong>
+                <p>Malaysia flight booking</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WHY SRUTHI -->
+
+    <section class="section">
+
+        <h2 class="section-title">
+            Why Choose Sruthi Travels?
+        </h2>
+
+        <div class="why-grid">
+
+            <div class="why">
+                <div class="why-icon">💬</div>
+                <h3>Easy Enquiry</h3>
+                <p>Send your travel details through WhatsApp.</p>
+            </div>
+
+            <div class="why">
+                <div class="why-icon">🤝</div>
+                <h3>Personal Assistance</h3>
+                <p>Get booking assistance from our travel team.</p>
+            </div>
+
+            <div class="why">
+                <div class="why-icon">🌍</div>
+                <h3>International Travel</h3>
+                <p>Assistance for domestic and international journeys.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- NAVIGATION -->
+
+    <div class="navigation">
+
+        <a href="index.html">🏠 Home</a>
+
+        <a href="visa.html">🛂 Visa Services</a>
+
+        <a href="hotels.html">🏨 Hotels</a>
+
+        <a href="tours.html">🧳 Tour Packages</a>
+
+        <a href="contact.html">📞 Contact</a>
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <h2>Sruthi Travels</h2>
+
+        <p>
+            Flight Booking • Visa Services • Hotels • Tour Packages
+        </p>
+
+        <p>
+            📞 9952772828
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="visa.html">Visa</a>
+
+            <a href="flights.html">Flights</a>
+
+        </div>
+
+        <p style="margin-top:15px;">
+            © 2026 Sruthi Travels. All rights reserved.
+        </p>
+
+    </footer>
+
+</div>
+
+<!-- FLOATING WHATSAPP -->
+
+<a
+    class="floating-whatsapp"
+    href="https://wa.me/919952772828?text=Hello%20Sruthi%20Travels%2C%20I%20need%20flight%20booking%20assistance."
+    target="_blank"
+    aria-label="WhatsApp">
+    💬
+</a>
+
+<script>
+
+function sendWhatsApp() {
+
+    const name =
+        document.getElementById("name").value || "Not provided";
+
+    const phone =
+        document.getElementById("phone").value || "Not provided";
+
+    const from =
+        document.getElementById("from").value || "Not provided";
+
+    const to =
+        document.getElementById("to").value || "Not provided";
+
+    const date =
+        document.getElementById("date").value || "Not provided";
+
+    const passengers =
+        document.getElementById("passengers").value;
+
+    const trip =
+        document.getElementById("trip").value;
+
+    const message =
+        "✈️ *FLIGHT BOOKING ENQUIRY*%0A%0A" +
+        "*Name:* " + encodeURIComponent(name) + "%0A" +
+        "*Mobile:* " + encodeURIComponent(phone) + "%0A" +
+        "*From:* " + encodeURIComponent(from) + "%0A" +
+        "*To:* " + encodeURIComponent(to) + "%0A" +
+        "*Travel Date:* " + encodeURIComponent(date) + "%0A" +
+        "*Passengers:* " + encodeURIComponent(passengers) + "%0A" +
+        "*Trip Type:* " + encodeURIComponent(trip);
+
+    window.open(
+        "https://wa.me/919952772828?text=" + message,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
