@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bus Booking | Sruthi Travels</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #fff7fb;
+    color: #1f1a20;
+}
+
+header {
+    background: linear-gradient(135deg, #732993, #8e44ad);
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+}
+
+header p {
+    margin: 6px 0 0;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 20px 50px;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #732993;
+    font-weight: 600;
+}
+
+.hero {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.bus-icon {
+    font-size: 65px;
+}
+
+.hero h2 {
+    color: #732993;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.hero p {
+    color: #4e4350;
+}
+
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    margin-top: 20px;
+    box-shadow: 0 5px 25px rgba(45,52,54,0.10);
+}
+
+.card h3 {
+    color: #732993;
+    margin-top: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.feature {
+    background: #fcf0fa;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.feature strong {
+    display: block;
+    margin-top: 7px;
+}
+
+.booking {
+    display: grid;
+    gap: 15px;
+}
+
+label {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 13px;
+    margin-top: 6px;
+    border: 1px solid #d1c2d2;
+    border-radius: 9px;
+    font-size: 15px;
+    font-family: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.whatsapp {
+    display: block;
+    width: 100%;
+    background: #00A870;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.call {
+    display: block;
+    width: 100%;
+    background: #732993;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.note {
+    text-align: center;
+    font-size: 13px;
+    color: #4e4350;
+    margin-top: 15px;
+}
+
+footer {
+    background: #352e36;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    margin: 6px;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+
+    .features {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Sruthi Travels</h1>
+    <p>Bus Ticket Booking Services</p>
+</header>
+
+<div class="container">
+
+    <a href="index.html" class="back">← Back to Home</a>
+
+    <section class="hero">
+        <div class="bus-icon">🚌</div>
+        <h2>Bus Ticket Booking</h2>
+        <p>
+            Book your bus tickets easily with Sruthi Travels.
+            We help you find convenient bus travel options.
+        </p>
+    </section>
+
+    <div class="card">
+        <h3>Our Bus Services</h3>
+
+        <div class="features">
+
+            <div class="feature">
+                🚌
+                <strong>AC Bus</strong>
+                Comfortable travel
+            </div>
+
+            <div class="feature">
+                🛏️
+                <strong>Sleeper Bus</strong>
+                Night journey
+            </div>
+
+            <div class="feature">
+                💺
+                <strong>Seater Bus</strong>
+                Affordable travel
+            </div>
+
+            <div class="feature">
+                🎫
+                <strong>Ticket Booking</strong>
+                Easy booking
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card">
+
+        <h3>Bus Booking Enquiry</h3>
+
+        <div class="booking">
+
+            <div>
+                <label>Your Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div>
+                <label>Mobile Number</label>
+                <input type="tel" id="phone" placeholder="Enter mobile number">
+            </div>
+
+            <div>
+                <label>From</label>
+                <input type="text" id="from" placeholder="Example: Chennai">
+            </div>
+
+            <div>
+                <label>To</label>
+                <input type="text" id="to" placeholder="Example: Madurai">
+            </div>
+
+            <div>
+                <label>Journey Date</label>
+                <input type="date" id="date">
+            </div>
+
+            <div>
+                <label>Bus Type</label>
+                <select id="busType">
+                    <option value="">Select Bus Type</option>
+                    <option>AC Seater</option>
+                    <option>AC Sleeper</option>
+                    <option>Non AC Seater</option>
+                    <option>Non AC Sleeper</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Passengers</label>
+                <select id="passengers">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                </select>
+            </div>
+
+            <div>
+                <label>Additional Request</label>
+                <textarea id="message" rows="3"
+                placeholder="Any special request?"></textarea>
+            </div>
+
+            <a href="#" class="whatsapp" onclick="sendWhatsApp(); return false;">
+                💬 WhatsApp Booking
+            </a>
+
+            <a href="tel:9952772828" class="call">
+                📞 Call Now - 9952772828
+            </a>
+
+        </div>
+
+        <div class="note">
+            Our team will contact you for booking confirmation and availability.
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <strong>Sruthi Travels</strong>
+
+    <p>📞 9952772828</p>
+    <p>📞 7448400728</p>
+
+    <p>© 2026 Sruthi Travels. All rights reserved.</p>
+
+</footer>
+
+<script>
+
+function sendWhatsApp() {
+
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let from = document.getElementById("from").value;
+    let to = document.getElementById("to").value;
+    let date = document.getElementById("date").value;
+    let busType = document.getElementById("busType").value;
+    let passengers = document.getElementById("passengers").value;
+    let message = document.getElementById("message").value;
+
+    let text =
+        "Hello Sruthi Travels,%0A%0A" +
+        "I need Bus Ticket Booking.%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Mobile: " + phone + "%0A" +
+        "From: " + from + "%0A" +
+        "To: " + to + "%0A" +
+        "Journey Date: " + date + "%0A" +
+        "Bus Type: " + busType + "%0A" +
+        "Passengers: " + passengers + "%0A" +
+        "Request: " + message;
+
+    window.open(
+        "https://wa.me/919952772828?text=" + text,
+        "_blank"
+    );
+}
+
+</script>
+
+</body>
+</html>
