@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +7,7 @@
 <title>Contact Us | SRUTHI COMMUNICATION</title>
 
 <style>
+
 * {
     margin: 0;
     padding: 0;
@@ -18,125 +18,139 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: #080808;
     color: #ffffff;
-    line-height: 1.6;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #050505, #181818);
-    padding: 24px 15px;
-    text-align: center;
-    border-bottom: 1px solid #c9a227;
-}
+/* ================= NAVIGATION ================= */
 
-.logo-title {
-    color: #d4af37;
-    font-size: 32px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.logo-subtitle {
-    color: #cccccc;
-    font-size: 14px;
-    margin-top: 5px;
-}
-
-/* NAVIGATION */
-nav {
+.navbar {
     background: #101010;
-    padding: 14px 10px;
-    text-align: center;
-    border-bottom: 1px solid #292929;
+    border-bottom: 1px solid #d4af37;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    display: inline-block;
-    margin: 5px 9px;
-    font-size: 15px;
-    font-weight: 500;
-    transition: 0.3s;
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 65px;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-nav a:hover {
+.brand {
     color: #d4af37;
+    text-decoration: none;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-/* HERO */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 11px 13px;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.nav-links a:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    color: #d4af37;
+    border: 1px solid #d4af37;
+    border-radius: 6px;
+    font-size: 25px;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+/* ================= HERO ================= */
+
 .hero {
     text-align: center;
-    padding: 55px 20px 35px;
+    padding: 55px 20px 40px;
+
     background:
-        radial-gradient(circle at top, #27210d 0%, #080808 55%);
+    radial-gradient(circle at top, #29230c 0%, #080808 60%);
 }
 
 .hero h1 {
     color: #d4af37;
     font-size: 42px;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
 .hero p {
     color: #cccccc;
     font-size: 17px;
-    max-width: 700px;
-    margin: auto;
+    line-height: 1.8;
 }
 
-/* MAIN */
+/* ================= MAIN ================= */
+
 .container {
     width: 92%;
     max-width: 1150px;
-    margin: 0 auto 50px;
+    margin: auto;
+    padding-bottom: 50px;
 }
 
-/* CONTACT TOP */
+/* ================= CONTACT ================= */
+
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1.15fr;
     gap: 25px;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
-/* CARDS */
 .card {
-    background: linear-gradient(145deg, #171717, #0e0e0e);
-    border: 1px solid #353535;
+    background: linear-gradient(145deg, #181818, #0e0e0e);
+    border: 1px solid #333;
     border-radius: 18px;
     padding: 30px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
 }
 
 .card:hover {
     border-color: #d4af37;
-    transform: translateY(-3px);
-    transition: 0.3s;
 }
 
 .card h2 {
     color: #d4af37;
-    margin-bottom: 18px;
-    font-size: 24px;
+    margin-bottom: 20px;
+    font-size: 25px;
 }
 
 .card p {
     color: #dddddd;
     font-size: 16px;
+    line-height: 1.8;
 }
 
-.address-line {
-    margin-bottom: 20px;
-}
-
-/* ICON */
-.big-icon {
+.icon {
     font-size: 42px;
     margin-bottom: 10px;
 }
 
-/* BUTTONS */
+/* ================= BUTTONS ================= */
+
 .button-area {
     display: flex;
     flex-wrap: wrap;
@@ -146,50 +160,50 @@ nav a:hover {
 
 .btn {
     display: inline-block;
-    padding: 13px 21px;
+    padding: 13px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
     text-align: center;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
 }
 
 .call-btn {
     background: #d4af37;
-    color: #000000;
+    color: #000;
 }
 
 .whatsapp-btn {
-    background: #25d366;
-    color: #ffffff;
+    background: #25D366;
+    color: white;
 }
 
 .direction-btn {
-    background: #ffffff;
-    color: #000000;
+    background: white;
+    color: #000;
 }
 
-/* MAP */
+.btn:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+/* ================= MAP ================= */
+
 .map-box {
     overflow: hidden;
     border-radius: 14px;
     border: 1px solid #444;
-    margin-top: 10px;
 }
 
 .map-box iframe {
     width: 100%;
-    height: 410px;
-    display: block;
+    height: 400px;
     border: 0;
+    display: block;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
+
 .services-title {
     text-align: center;
     margin: 55px 0 25px;
@@ -201,13 +215,13 @@ nav a:hover {
 }
 
 .services-title p {
-    color: #aaaaaa;
-    margin-top: 6px;
+    color: #aaa;
+    margin-top: 8px;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
 }
 
@@ -220,8 +234,8 @@ nav a:hover {
 
 .service-card h3 {
     color: #d4af37;
-    font-size: 22px;
     margin-bottom: 15px;
+    font-size: 22px;
 }
 
 .service-card ul {
@@ -229,23 +243,21 @@ nav a:hover {
 }
 
 .service-card li {
-    color: #dddddd;
-    padding: 7px 0;
+    color: #ddd;
+    padding: 9px 0;
     border-bottom: 1px solid #292929;
 }
 
-.service-card li:last-child {
-    border-bottom: none;
-}
+/* ================= CTA ================= */
 
-/* CTA */
 .cta {
     text-align: center;
     margin-top: 45px;
     padding: 35px 20px;
-    border: 1px solid #4b3d14;
+
+    background: linear-gradient(135deg, #19160b, #0c0c0c);
+    border: 1px solid #514317;
     border-radius: 18px;
-    background: linear-gradient(135deg, #17140b, #0d0d0d);
 }
 
 .cta h2 {
@@ -254,47 +266,66 @@ nav a:hover {
 }
 
 .cta p {
-    color: #cccccc;
+    color: #ccc;
     margin-bottom: 20px;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
+
 footer {
     background: #050505;
     border-top: 1px solid #292929;
     text-align: center;
     padding: 25px 15px;
-    color: #999999;
+    color: #999;
 }
 
 footer strong {
     color: #d4af37;
 }
 
-.footer-links {
-    margin-top: 8px;
-}
+/* ================= MOBILE ================= */
 
-.footer-links a {
-    color: #bbbbbb;
-    text-decoration: none;
-    margin: 0 8px;
-}
+@media (max-width: 768px) {
 
-.footer-links a:hover {
-    color: #d4af37;
-}
-
-/* MOBILE */
-@media (max-width: 800px) {
-
-    .logo-title {
-        font-size: 25px;
+    .nav-container {
+        min-height: 60px;
     }
 
-    nav a {
-        margin: 5px 6px;
-        font-size: 14px;
+    .brand {
+        font-size: 16px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+        top: 60px;
+        left: 0;
+
+        width: 100%;
+
+        background: #101010;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        padding: 10px 15px 15px;
+
+        border-bottom: 1px solid #d4af37;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 14px;
+        border-bottom: 1px solid #292929;
     }
 
     .hero {
@@ -318,11 +349,11 @@ footer strong {
     }
 
     .card {
-        padding: 24px;
+        padding: 23px;
     }
 
     .map-box iframe {
-        height: 330px;
+        height: 320px;
     }
 
     .button-area {
@@ -333,91 +364,146 @@ footer strong {
         width: 100%;
     }
 }
+
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header>
-    <div class="logo-title">SRUTHI COMMUNICATION</div>
-    <div class="logo-subtitle">Travel & Digital Services</div>
-</header>
 
-<!-- NAVIGATION -->
-<nav>
-    <a href="index.html">Home</a>
-    <a href="flights.html">Flights</a>
-    <a href="hotels.html">Hotels</a>
-    <a href="visa.html">Visa</a>
-    <a href="bus.html">Bus</a>
-    <a href="Rail.html">Rail</a>
-    <a href="contact.html">Contact</a>
+<!-- ================= NAVIGATION ================= -->
+
+<nav class="navbar">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="brand">
+            SRUTHI COMMUNICATION
+        </a>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            ☰
+        </button>
+
+        <div class="nav-links" id="navLinks">
+
+            <a href="index.html">Home</a>
+
+            <a href="flights.html">Flights</a>
+
+            <a href="hotels.html">Hotels</a>
+
+            <a href="visa.html">Visa</a>
+
+            <a href="bus.html">Bus</a>
+
+            <a href="Rail.html">Rail</a>
+
+            <a href="index.html#services">Services</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </div>
+
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-    <h1>Contact Us</h1>
-    <p>
-        
-    Your trusted destination for Travel Booking and Digital Services.<br>
-    Contact SRUTHI COMMUNICATION for assistance.
 
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>Contact Us</h1>
+
+    <p>
+        Your trusted destination for Travel Booking and Digital Services.<br>
+        Contact SRUTHI COMMUNICATION for assistance.
     </p>
+
 </section>
 
-<!-- MAIN -->
+
+<!-- ================= MAIN ================= -->
+
 <div class="container">
+
+
+    <!-- CONTACT + MAP -->
 
     <div class="contact-grid">
 
-        <!-- ADDRESS -->
+
+        <!-- OFFICE -->
+
         <div class="card">
 
-            <div class="big-icon">📍</div>
+            <div class="icon">📍</div>
 
             <h2>Our Office</h2>
 
-            <p class="address-line">
+            <p>
+
                 <strong>SRUTHI COMMUNICATION</strong><br>
+
                 No. 4343, LIG 1,<br>
+
                 1st Cross Street,<br>
+
                 Mathur MMDA,<br>
+
                 Chennai – 600068,<br>
+
                 Tamil Nadu, India
+
             </p>
 
-            <p>
+
+            <p style="margin-top:15px;">
+
                 📞 <strong>9952772828</strong>
+
             </p>
+
 
             <div class="button-area">
+
 
                 <a
                     href="tel:+919952772828"
                     class="btn call-btn">
+
                     📞 Call Now
+
                 </a>
+
 
                 <a
                     href="https://wa.me/919952772828"
                     target="_blank"
                     class="btn whatsapp-btn">
+
                     💬 WhatsApp
+
                 </a>
+
 
                 <a
                     href="https://maps.app.goo.gl/Cp1Qz38ijXTSzYa2A"
                     target="_blank"
                     class="btn direction-btn">
+
                     📍 Get Directions
+
                 </a>
 
             </div>
 
         </div>
 
-        <!-- MAP -->
+
+        <!-- GOOGLE MAP -->
+
         <div class="card">
 
             <h2>Find Us on Google Maps</h2>
@@ -436,47 +522,74 @@ footer strong {
 
     </div>
 
-    <!-- SERVICES -->
+
+    <!-- ================= SERVICES ================= -->
+
     <div class="services-title">
+
         <h2>Our Services</h2>
-        <p>Professional services for your travel and digital needs</p>
+
+        <p>
+            Professional services for your travel and digital needs
+        </p>
+
     </div>
 
+
     <div class="services-grid">
+
 
         <div class="service-card">
 
             <h3>✈️ Travel Services</h3>
 
             <ul>
+
                 <li>✈️ Flight Ticket Booking</li>
+
                 <li>🏨 Hotel Booking</li>
+
                 <li>🛂 Visa Services</li>
+
                 <li>🚌 Bus Booking</li>
+
                 <li>🚆 Rail Booking</li>
+
                 <li>🌍 Tour Packages</li>
+
             </ul>
 
         </div>
+
 
         <div class="service-card">
 
             <h3>💻 Digital Services</h3>
 
             <ul>
+
                 <li>🛂 Passport Services</li>
+
                 <li>📄 PAN Card Services</li>
+
                 <li>💳 Bill Payment Services</li>
+
                 <li>🛡️ Insurance Services</li>
+
                 <li>📝 Online Applications</li>
+
                 <li>🖨️ Printing & Xerox Services</li>
+
             </ul>
 
         </div>
 
+
     </div>
 
-    <!-- CTA -->
+
+    <!-- ================= CTA ================= -->
+
     <div class="cta">
 
         <h2>Need Assistance?</h2>
@@ -485,19 +598,27 @@ footer strong {
             Call us or send a WhatsApp message for booking and enquiry.
         </p>
 
-        <div class="button-area" style="justify-content:center;">
+
+        <div class="button-area"
+             style="justify-content:center;">
+
 
             <a
                 href="tel:+919952772828"
                 class="btn call-btn">
+
                 📞 9952772828
+
             </a>
+
 
             <a
                 href="https://wa.me/919952772828"
                 target="_blank"
                 class="btn whatsapp-btn">
+
                 💬 WhatsApp Booking
+
             </a>
 
         </div>
@@ -506,20 +627,33 @@ footer strong {
 
 </div>
 
-<!-- FOOTER -->
+
+<!-- ================= FOOTER ================= -->
+
 <footer>
 
-    © 2026 <strong>SRUTHI COMMUNICATION</strong>
+    © 2026
+    <strong>SRUTHI COMMUNICATION</strong>
     | All Rights Reserved
-
-    <div class="footer-links">
-        <a href="index.html">Home</a>
-        |
-        <a href="contact.html">Contact</a>
-    </div>
 
 </footer>
 
+
+<!-- ================= MOBILE MENU SCRIPT ================= -->
+
+<script>
+
+function toggleMenu() {
+
+    document
+        .getElementById("navLinks")
+        .classList
+        .toggle("active");
+
+}
+
+</script>
+
+
 </body>
 </html>
-```
