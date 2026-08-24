@@ -1,10 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Contact Us | Sruthi Communication</title>
+<title>Contact Us | SRUTHI COMMUNICATION</title>
 
 <style>
 * {
@@ -14,178 +15,322 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #0b0b0b, #1c1c1c);
-    color: white;
-    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #080808;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-/* Header */
+/* HEADER */
 header {
-    background: #000;
-    padding: 18px 25px;
+    background: linear-gradient(135deg, #050505, #181818);
+    padding: 24px 15px;
     text-align: center;
-    border-bottom: 2px solid #d4af37;
+    border-bottom: 1px solid #c9a227;
 }
 
-header h1 {
+.logo-title {
     color: #d4af37;
-    font-size: 30px;
-    letter-spacing: 1px;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
 
-header p {
-    color: #ddd;
+.logo-subtitle {
+    color: #cccccc;
+    font-size: 14px;
     margin-top: 5px;
 }
 
-/* Navigation */
+/* NAVIGATION */
 nav {
-    background: #111;
+    background: #101010;
+    padding: 14px 10px;
     text-align: center;
-    padding: 14px 5px;
+    border-bottom: 1px solid #292929;
 }
 
 nav a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
-    margin: 0 10px;
+    display: inline-block;
+    margin: 5px 9px;
     font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 nav a:hover {
     color: #d4af37;
 }
 
-/* Main */
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.title {
+/* HERO */
+.hero {
     text-align: center;
-    margin-bottom: 35px;
+    padding: 55px 20px 35px;
+    background:
+        radial-gradient(circle at top, #27210d 0%, #080808 55%);
 }
 
-.title h2 {
+.hero h1 {
     color: #d4af37;
-    font-size: 32px;
+    font-size: 42px;
+    margin-bottom: 12px;
 }
 
-.title p {
-    color: #ccc;
-    margin-top: 8px;
+.hero p {
+    color: #cccccc;
+    font-size: 17px;
+    max-width: 700px;
+    margin: auto;
 }
 
-/* Contact Cards */
-.contact-box {
+/* MAIN */
+.container {
+    width: 92%;
+    max-width: 1150px;
+    margin: 0 auto 50px;
+}
+
+/* CONTACT TOP */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+/* CARDS */
+.card {
+    background: linear-gradient(145deg, #171717, #0e0e0e);
+    border: 1px solid #353535;
+    border-radius: 18px;
+    padding: 30px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.45);
+}
+
+.card:hover {
+    border-color: #d4af37;
+    transform: translateY(-3px);
+    transition: 0.3s;
+}
+
+.card h2 {
+    color: #d4af37;
+    margin-bottom: 18px;
+    font-size: 24px;
+}
+
+.card p {
+    color: #dddddd;
+    font-size: 16px;
+}
+
+.address-line {
+    margin-bottom: 20px;
+}
+
+/* ICON */
+.big-icon {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+/* BUTTONS */
+.button-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 21px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.call-btn {
+    background: #d4af37;
+    color: #000000;
+}
+
+.whatsapp-btn {
+    background: #25d366;
+    color: #ffffff;
+}
+
+.direction-btn {
+    background: #ffffff;
+    color: #000000;
+}
+
+/* MAP */
+.map-box {
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid #444;
+    margin-top: 10px;
+}
+
+.map-box iframe {
+    width: 100%;
+    height: 410px;
+    display: block;
+    border: 0;
+}
+
+/* SERVICES */
+.services-title {
+    text-align: center;
+    margin: 55px 0 25px;
+}
+
+.services-title h2 {
+    color: #d4af37;
+    font-size: 30px;
+}
+
+.services-title p {
+    color: #aaaaaa;
+    margin-top: 6px;
+}
+
+.services-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
-.card {
-    background: #151515;
-    border: 1px solid #444;
-    border-radius: 15px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+.service-card {
+    background: #141414;
+    border: 1px solid #303030;
+    border-radius: 16px;
+    padding: 28px;
 }
 
-.card .icon {
-    font-size: 42px;
+.service-card h3 {
+    color: #d4af37;
+    font-size: 22px;
     margin-bottom: 15px;
 }
 
-.card h3 {
+.service-card ul {
+    list-style: none;
+}
+
+.service-card li {
+    color: #dddddd;
+    padding: 7px 0;
+    border-bottom: 1px solid #292929;
+}
+
+.service-card li:last-child {
+    border-bottom: none;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    margin-top: 45px;
+    padding: 35px 20px;
+    border: 1px solid #4b3d14;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #17140b, #0d0d0d);
+}
+
+.cta h2 {
     color: #d4af37;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 }
 
-.card p {
-    color: #ddd;
-    line-height: 1.7;
+.cta p {
+    color: #cccccc;
+    margin-bottom: 20px;
 }
 
-/* Address */
-.address {
-    grid-column: 1 / -1;
-}
-
-.address p {
-    font-size: 17px;
-}
-
-/* Buttons */
-.buttons {
-    text-align: center;
-    margin-top: 35px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 14px 28px;
-    margin: 8px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.home-btn {
-    background: #d4af37;
-    color: #000;
-}
-
-.whatsapp-btn {
-    background: #25D366;
-    color: white;
-}
-
-.btn:hover {
-    transform: translateY(-3px);
-    opacity: 0.9;
-}
-
-/* Footer */
+/* FOOTER */
 footer {
-    margin-top: 50px;
-    background: #000;
-    border-top: 1px solid #333;
+    background: #050505;
+    border-top: 1px solid #292929;
     text-align: center;
-    padding: 20px;
-    color: #aaa;
+    padding: 25px 15px;
+    color: #999999;
 }
 
 footer strong {
     color: #d4af37;
 }
 
-/* Mobile */
-@media (max-width: 700px) {
+.footer-links {
+    margin-top: 8px;
+}
 
-    header h1 {
-        font-size: 24px;
+.footer-links a {
+    color: #bbbbbb;
+    text-decoration: none;
+    margin: 0 8px;
+}
+
+.footer-links a:hover {
+    color: #d4af37;
+}
+
+/* MOBILE */
+@media (max-width: 800px) {
+
+    .logo-title {
+        font-size: 25px;
     }
 
     nav a {
-        display: inline-block;
-        margin: 6px 7px;
+        margin: 5px 6px;
+        font-size: 14px;
     }
 
-    .contact-box {
+    .hero {
+        padding: 40px 15px 30px;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .contact-grid {
         grid-template-columns: 1fr;
     }
 
-    .address {
-        grid-column: auto;
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 
-    .title h2 {
-        font-size: 27px;
+    .card {
+        padding: 24px;
+    }
+
+    .map-box iframe {
+        height: 330px;
+    }
+
+    .button-area {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
     }
 }
 </style>
@@ -193,11 +338,13 @@ footer strong {
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>SRUTHI COMMUNICATION</h1>
-    <p>Travel & Digital Services</p>
+    <div class="logo-title">SRUTHI COMMUNICATION</div>
+    <div class="logo-subtitle">Travel & Digital Services</div>
 </header>
 
+<!-- NAVIGATION -->
 <nav>
     <a href="index.html">Home</a>
     <a href="flights.html">Flights</a>
@@ -208,37 +355,28 @@ footer strong {
     <a href="contact.html">Contact</a>
 </nav>
 
+<!-- HERO -->
+<section class="hero">
+    <h1>Contact Us</h1>
+    <p>
+        Your trusted destination for Travel Booking and Digital Services.
+        Contact SRUTHI COMMUNICATION for assistance.
+    </p>
+</section>
+
+<!-- MAIN -->
 <div class="container">
 
-    <div class="title">
-        <h2>Contact Us</h2>
-        <p>We are happy to assist you with your travel and digital service needs.</p>
-    </div>
+    <div class="contact-grid">
 
-    <div class="contact-box">
+        <!-- ADDRESS -->
+        <div class="card">
 
-        <div class="card address">
-            <div class="icon">📍</div>
-            <h3>Our Address</h3>
-            <p>
-                <div class="map-container">
-    <iframe
-        src="https://www.google.com/maps?q=13.1675344,80.2475568&output=embed"
-        width="100%"
-        height="350"
-        style="border:0; border-radius:15px;"
-        allowfullscreen=""
-        loading="lazy">
-    </iframe>
-</div>
+            <div class="big-icon">📍</div>
 
-<div style="text-align:center; margin-top:20px;">
-    <a href="https://maps.app.goo.gl/Cp1Qz38ijXTSzYa2A"
-       target="_blank"
-       class="btn home-btn">
-       📍 Get Directions
-    </a>
-</div>
+            <h2>Our Office</h2>
+
+            <p class="address-line">
                 <strong>SRUTHI COMMUNICATION</strong><br>
                 No. 4343, LIG 1,<br>
                 1st Cross Street,<br>
@@ -246,53 +384,140 @@ footer strong {
                 Chennai – 600068,<br>
                 Tamil Nadu, India
             </p>
+
+            <p>
+                📞 <strong>9952772828</strong>
+            </p>
+
+            <div class="button-area">
+
+                <a
+                    href="tel:+919952772828"
+                    class="btn call-btn">
+                    📞 Call Now
+                </a>
+
+                <a
+                    href="https://wa.me/919952772828"
+                    target="_blank"
+                    class="btn whatsapp-btn">
+                    💬 WhatsApp
+                </a>
+
+                <a
+                    href="https://maps.app.goo.gl/Cp1Qz38ijXTSzYa2A"
+                    target="_blank"
+                    class="btn direction-btn">
+                    📍 Get Directions
+                </a>
+
+            </div>
+
         </div>
 
+        <!-- MAP -->
         <div class="card">
-            <div class="icon">✈️</div>
-            <h3>Travel Services</h3>
-            <p>
-                Flight Booking<br>
-                Hotel Booking<br>
-                Visa Services<br>
-                Bus Booking<br>
-                Rail Booking<br>
-                Tour Packages
-            </p>
-        </div>
 
-        <div class="card">
-            <div class="icon">💻</div>
-            <h3>Digital Services</h3>
-            <p>
-                Passport Services<br>
-                PAN Card Services<br>
-                Bill Payments<br>
-                Insurance Services<br>
-                Online Applications<br>
-                Printing & Xerox
-            </p>
+            <h2>Find Us on Google Maps</h2>
+
+            <div class="map-box">
+
+                <iframe
+                    src="https://www.google.com/maps?q=13.1675344,80.2475568&output=embed"
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+
+            </div>
+
         </div>
 
     </div>
 
-    <div class="buttons">
+    <!-- SERVICES -->
+    <div class="services-title">
+        <h2>Our Services</h2>
+        <p>Professional services for your travel and digital needs</p>
+    </div>
 
-        <a href="index.html" class="btn home-btn">
-            🏠 Back to Home
-        </a>
+    <div class="services-grid">
 
-        <a href="https://wa.me/" class="btn whatsapp-btn">
-            💬 WhatsApp Booking
-        </a>
+        <div class="service-card">
+
+            <h3>✈️ Travel Services</h3>
+
+            <ul>
+                <li>✈️ Flight Ticket Booking</li>
+                <li>🏨 Hotel Booking</li>
+                <li>🛂 Visa Services</li>
+                <li>🚌 Bus Booking</li>
+                <li>🚆 Rail Booking</li>
+                <li>🌍 Tour Packages</li>
+            </ul>
+
+        </div>
+
+        <div class="service-card">
+
+            <h3>💻 Digital Services</h3>
+
+            <ul>
+                <li>🛂 Passport Services</li>
+                <li>📄 PAN Card Services</li>
+                <li>💳 Bill Payment Services</li>
+                <li>🛡️ Insurance Services</li>
+                <li>📝 Online Applications</li>
+                <li>🖨️ Printing & Xerox Services</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="cta">
+
+        <h2>Need Assistance?</h2>
+
+        <p>
+            Call us or send a WhatsApp message for booking and enquiry.
+        </p>
+
+        <div class="button-area" style="justify-content:center;">
+
+            <a
+                href="tel:+919952772828"
+                class="btn call-btn">
+                📞 9952772828
+            </a>
+
+            <a
+                href="https://wa.me/919952772828"
+                target="_blank"
+                class="btn whatsapp-btn">
+                💬 WhatsApp Booking
+            </a>
+
+        </div>
 
     </div>
 
 </div>
 
+<!-- FOOTER -->
 <footer>
-    © 2026 <strong>SRUTHI COMMUNICATION</strong> | All Rights Reserved
+
+    © 2026 <strong>SRUTHI COMMUNICATION</strong>
+    | All Rights Reserved
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        |
+        <a href="contact.html">Contact</a>
+    </div>
+
 </footer>
 
 </body>
 </html>
+```
